@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: "Lato", sans-serif;
+
+  display: flex;
+  place-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  background: #d9cdf7;
+
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  gap: 13px;
+}
+
+.product {
+    position: relative;
+}
+
+.product button {
+  position: absolute;
+  margin: 8px 0 0 366px;
+}
+
+img {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+#gif {
+  height: 253px; 
+  width: 449px;
+}
+
+#gif,
+.deactivate-360 {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.text {
+  display: grid;
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-weight: 300;
+  font-size: 0.625em;
+  line-height: 100%;
+
+  color: #271a45;
+}
+
+.text h1 {
+  font-family: "Crimson Pro";
+  font-size: 2em;
+  line-height: 100%;
+
+  color: #271a45;
+}
+
+.text :nth-last-child(1) {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 100%;
+
+  opacity: 0.67;
+  color: #271a45;
+}
+
+.description button {
+  border: 0.5px solid #271a45;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.description button:hover {
+  background: #271a45;
+  color: white;
+  transition: ease-in-out .3s;
+}
+
+body.funcionando .product img,
+body.funcionando .product .active-360 {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+} 
+
+body.funcionando #gif,
+body.funcionando .deactivate-360 {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}  
+
+@media (max-width: 850px) {
+    body {
+         display: flex;
+         flex-direction: column;
+    }
+}
